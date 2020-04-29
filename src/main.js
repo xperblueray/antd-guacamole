@@ -1,8 +1,16 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue/dist/vue.esm.js'
+import App from './App'
+import 'ant-design-vue/dist/antd.css'
+import Antd from 'ant-design-vue'
 
-Vue.config.productionTip = false
 
+Vue.config.productionTip = false;
+
+Vue.use(Antd);
+
+/* eslint-disable no-new */
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  el: '#app',
+  components: { App },
+  template: '<App/>',
+});
